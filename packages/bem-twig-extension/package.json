@@ -1,6 +1,6 @@
 {
   "name": "bem-twig-extension",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "BEM Twig extension for Twig.js projects",
   "keywords": [
     "twig.js",
