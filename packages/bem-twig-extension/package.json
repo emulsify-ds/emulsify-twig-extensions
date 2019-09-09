@@ -1,0 +1,24 @@
+{
+  "name": "bem-twig-extension",
+  "version": "0.0.1",
+  "description": "BEM Twig extension for Twig.js projects",
+  "keywords": [
+    "twig.js",
+    "BEM",
+    "Twig"
+  ],
+  "author": "Evan Willhite <evan@fourkitchens.com>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "lib/bem-twig-extension.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  }
+}
