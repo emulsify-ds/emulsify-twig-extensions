@@ -1,6 +1,6 @@
 {
   "name": "add-attributes-twig-extension",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "add_attributes Twig extension for Twig.js projects",
   "keywords": [
     "Twig",
