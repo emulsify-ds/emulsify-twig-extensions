@@ -2,8 +2,8 @@
 
 module.exports = addAttributesTwigExtension;
 
-function addAttributesTwigExtension() {
-  Twig.extendFunction("add_attributes", function(additional_attributes = []) {
+function addAttributesTwigExtension(Twig) {
+  Twig.extendFunction("add_attributes", function(additional_attributes = [], attributes = '') {
     attributes = [];
   
     for (const [key, value] of Object.entries(additional_attributes)) {

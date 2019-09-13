@@ -2,8 +2,8 @@
 
 module.exports = bemTwigExtension;
 
-function bemTwigExtension() {
-  Twig.extendFunction("bem", function(base_class, modifiers = [], blockname = '', extra = []) {
+function bemTwigExtension(Twig) {
+  Twig.extendFunction("bem", function(base_class, modifiers = [], blockname = '', extra = [], attributes = '') {
     let classes = [];
     
     // If using a blockname to override default class.

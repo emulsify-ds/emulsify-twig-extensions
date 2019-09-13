@@ -19,5 +19,11 @@
   ],
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "peerDependencies": {
+    "twig": "^1.13.3"
+  },
+  "devDependencies": {
+    "twig": "^1.13.3"
   }
 }
