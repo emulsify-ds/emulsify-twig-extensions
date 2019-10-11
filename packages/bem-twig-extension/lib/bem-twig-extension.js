@@ -33,7 +33,7 @@ function bemTwigExtension(Twig) {
     // If extra non-BEM classes are added.
     if (extra.length && Array.isArray(extra)) {
         extra.forEach(function(extra_class) {
-        classes.push($extra_class);
+        classes.push(extra_class);
         });
     }
     
