@@ -5,7 +5,7 @@ module.exports = addAttributesTwigExtension;
 function addAttributesTwigExtension(Twig) {
   Twig.extendFunction("add_attributes", function(additional_attributes = [], attributes = '') {
     attributes = [];
-  
+
     for (const [key, value] of Object.entries(additional_attributes)) {
       // If not keys array.
       if (key !== '_keys') {
@@ -15,7 +15,7 @@ function addAttributesTwigExtension(Twig) {
         }
         else {
           // Handle bem() output (pass in exactly the result).
-          if (value.includes('=')) {
+          if (String(value).includes('=')) {
             attributes.push(value);
           }
           else {
@@ -24,7 +24,7 @@ function addAttributesTwigExtension(Twig) {
         }
       }
     }
-  
+
     return attributes.join(' ');
   });
 }
