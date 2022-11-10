@@ -14,7 +14,7 @@ function addAttributesTwigExtension(Twig) {
           case 'boolean':
           case 'number':
             // Handle bem() output (pass in exactly the result).
-            if (value.includes('=')) {
+            if (typeof value === 'string' && value.includes('=')) {
               attributes.push(String(value));
             }
             else {
