@@ -5,26 +5,32 @@ module.exports = addAttributesTwigExtension;
 function addAttributesTwigExtension(Twig) {
   Twig.extendFunction("add_attributes", function(additional_attributes = [], attributes = '') {
     attributes = [];
-  
+
     for (const [key, value] of Object.entries(additional_attributes)) {
       // If not keys array.
       if (key !== '_keys') {
-        // If multiples items in value as array (e.g., class: ['one', 'two']).
-        if (Array.isArray(value)) {
-          attributes.push(key + '="' + value.join(' ') + '"');
-        }
-        else {
-          // Handle bem() output (pass in exactly the result).
-          if (value.includes('=')) {
-            attributes.push(value);
-          }
-          else {
-            attributes.push(key + '="' + value + '"');
-          }
+        switch (typeof value) {
+          case 'string':
+          case 'boolean':
+          case 'number':
+            // Handle bem() output (pass in exactly the result).
+            if (typeof value === 'string' && value.includes('=')) {
+              attributes.push(String(value));
+            }
+            else {
+              attributes.push(key + '="' + String(value) + '"');
+            }
+            break;
+          case 'object':
+            // use Array.isArray to differentiate regular objects from arrays
+            if (Array.isArray(value)) {
+              attributes.push(key + '="' + value.join(' ') + '"');
+            }
+            break;
         }
       }
     }
-  
+
     return attributes.join(' ');
   });
 }
