@@ -4,7 +4,7 @@ module.exports = uniqueIdTwigExtension;
 
 function uniqueIdTwigExtension(Twig) {
   Twig.extendFunction("uniqueId", function(additional_attributes = [], attributes = '') {
-  console.log('Inside unique ID function 222333');
+  console.log('Inside unique ID function 555555');
     //   attributes = [];
 
   //   for (const [key, value] of Object.entries(additional_attributes)) {
