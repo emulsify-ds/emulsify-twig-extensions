@@ -2,10 +2,11 @@
   "name": "root",
   "private": true,
   "devDependencies": {
-    "lerna": "^3.16.4",
-    "semantic-release": "^24.2.8"
+    "lerna": "^8.2.3",
+    "semantic-release": "^24.2.8",
+    "semantic-release-monorepo": "^8.0.2"
   },
   "scripts": {
-    "semantic-release": "semantic-release --config ./release.config.cjs"
+    "semantic-release": "lerna exec --concurrency 1 -- npx --no-install semantic-release -e semantic-release-monorepo"
   }
 }

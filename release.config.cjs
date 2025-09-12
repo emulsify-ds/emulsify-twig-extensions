@@ -2,6 +2,7 @@
 module.exports = {
   branches: ['main'],
   repositoryUrl: 'git@github.com:emulsify-ds/emulsify-twig-extensions.git',
+  extends: "semantic-release-monorepo",
   plugins: [
     [
       '@semantic-release/commit-analyzer',
@@ -28,3 +29,4 @@ module.exports = {
     '@semantic-release/github'
   ]
 }
+
