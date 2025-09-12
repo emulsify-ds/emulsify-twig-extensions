@@ -2,8 +2,5 @@
   "packages": [
     "packages/*"
   ],
-  "version": "independent",
-  "semantic-release": {
-    "npmPublish": false
-  }
+  "version": "independent"
 }

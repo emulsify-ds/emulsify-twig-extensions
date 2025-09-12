@@ -7,6 +7,6 @@
     "semantic-release-monorepo": "^8.0.2"
   },
   "scripts": {
-    "semantic-release": "lerna exec --concurrency 1 -- npx --no-install semantic-release -e semantic-release-monorepo"
+    "semantic-release": "semantic-release -e semantic-release-monorepo --config ./release.config.cjs"
   }
 }
