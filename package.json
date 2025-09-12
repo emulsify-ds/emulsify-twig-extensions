@@ -2,6 +2,10 @@
   "name": "root",
   "private": true,
   "devDependencies": {
-    "lerna": "^3.16.4"
+    "lerna": "^3.16.4",
+    "semantic-release": "^24.2.8"
+  },
+  "scripts": {
+    "semantic-release": "semantic-release --config ./release.config.cjs"
   }
 }
